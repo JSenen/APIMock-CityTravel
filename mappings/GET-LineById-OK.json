@@ -1,14 +1,14 @@
 {
-  "priority": 1,
   "request": {
     "method": "GET",
-    "url": "/line/45"
+    "url": "/lines"
   },
   "response": {
-    "status": 404,
+    "status": 200,
     "headers": {
       "Content-Type": "application/json"
     },
-    "bodyFileName": "getLineById-404-KO.json"
+    "bodyFileName": "GET-LineById-OK.json"
+
   }
 }

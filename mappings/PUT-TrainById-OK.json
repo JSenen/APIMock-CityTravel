@@ -1,13 +1,13 @@
 {
   "request": {
-    "method": "GET",
-    "url": "/lines"
+    "method": "PUT",
+    "url": "/train/4"
   },
   "response": {
-    "status": 200,
+    "status": 202,
     "headers": {
       "Content-Type": "application/json"
     },
-    "bodyFileName": "getLines-OK.json"
+    "bodyFileName": "PUT-TrainById-OK.json"
   }
 }

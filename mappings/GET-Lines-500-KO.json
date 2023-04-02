@@ -9,6 +9,6 @@
     "headers": {
       "Content-Type": "application/json"
     },
-    "bodyFileName": "getLines-500-KO.json"
+    "bodyFileName": "GET-Lines-500-KO.json"
   }
 }

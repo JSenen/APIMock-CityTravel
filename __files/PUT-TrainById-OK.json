@@ -1,0 +1,9 @@
+{
+  "id": 4,
+  "code": "DDS",
+  "model": "sit",
+  "numWagons": 20,
+  "numSeats": 230,
+  "numStandUp": 64,
+  "datebuy": "04/02/2023"
+}

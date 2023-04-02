@@ -1,13 +1,13 @@
 {
   "request": {
     "method": "POST",
-    "url": "/train/a"
+    "url": "/access/6/access"
   },
   "response": {
-    "status": 400,
+    "status": 201,
     "headers": {
       "Content-Type": "application/json"
     },
-    "bodyFileName": "getTrainById-400-KO.json"
+    "bodyFileName": "PATCH-AccessById-OK.json"
   }
 }
