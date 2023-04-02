@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "PATCH",
+    "url": "/line/79"
+  },
+  "response": {
+    "status": 404,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "PATCH-LineById-KO.json"
+  }
+}

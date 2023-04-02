@@ -1,0 +1,14 @@
+{
+  "request": {
+    "method": "PATCH",
+    "url": "/access/a"
+  },
+  "response": {
+    "status": 400,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "PUT-AccessById-400-KO.json"
+
+  }
+}
