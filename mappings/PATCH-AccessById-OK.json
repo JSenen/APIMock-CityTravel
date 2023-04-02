@@ -1,6 +1,6 @@
 {
   "request": {
-    "method": "POST",
+    "method": "PATCH",
     "url": "/access/6/access"
   },
   "response": {

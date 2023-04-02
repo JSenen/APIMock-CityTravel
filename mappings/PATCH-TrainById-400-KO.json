@@ -1,6 +1,6 @@
 {
   "request": {
-    "method": "GET",
+    "method": "PATCH",
     "url": "/train/a"
   },
   "response": {
@@ -8,6 +8,7 @@
     "headers": {
       "Content-Type": "application/json"
     },
-    "bodyFileName": "GET-TrainById-400-KO.json"
+    "bodyFileName": "PATCH-TrainById-400-KO.json",
+
   }
 }

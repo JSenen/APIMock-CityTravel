@@ -1,13 +1,13 @@
 {
   "request": {
-    "method": "GET",
-    "url": "/train/a"
+    "method": "DELETE",
+    "url": "/access/a"
   },
   "response": {
     "status": 400,
     "headers": {
       "Content-Type": "application/json"
     },
-    "bodyFileName": "GET-TrainById-400-KO.json"
+    "bodyFileName": "DELETE-StationById-OK.json"
   }
 }
