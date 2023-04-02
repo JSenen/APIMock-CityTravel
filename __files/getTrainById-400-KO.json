@@ -1,0 +1,6 @@
+{
+  "timestamp": "2023-04-02T19:07:28.095+00:00",
+  "status": 400,
+  "error": "Bad Request",
+  "path": "/train/a"
+}

@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/train/a"
+  },
+  "response": {
+    "status": 400,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "getTrainById-400-KO.json"
+  }
+}
