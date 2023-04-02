@@ -1,0 +1,14 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/lines"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "getLineById-OK.json",
+
+  }
+}

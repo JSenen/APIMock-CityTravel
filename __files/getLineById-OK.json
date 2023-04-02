@@ -1,0 +1,67 @@
+{
+  "id": 5,
+  "codeLine": "L-9",
+  "color": "white",
+  "firstTime": "06:30",
+  "lastTime": "22:30",
+  "stopTime": 2,
+  "trains": [],
+  "stations": [
+    {
+      "id": 23,
+      "name": "Schinnershire-STATION",
+      "hopen": "04:30",
+      "latitude": 33.4105,
+      "longitude": -67.7763,
+      "hclose": "23:45",
+      "ptoInfo": false,
+      "wifi": false,
+      "busStation": false,
+      "taxiStation": false,
+      "lineAccessList": [],
+      "lineGarageList": []
+    },
+    {
+      "id": 24,
+      "name": "West Bretfort-STATION",
+      "hopen": "07:00",
+      "latitude": -14.069,
+      "longitude": -126.1035,
+      "hclose": "22:30",
+      "ptoInfo": false,
+      "wifi": false,
+      "busStation": false,
+      "taxiStation": false,
+      "lineAccessList": [],
+      "lineGarageList": []
+    },
+    {
+      "id": 25,
+      "name": "West Michellefort-STATION",
+      "hopen": "04:00",
+      "latitude": -83.0843,
+      "longitude": -13.4314,
+      "hclose": "23:30",
+      "ptoInfo": false,
+      "wifi": false,
+      "busStation": false,
+      "taxiStation": false,
+      "lineAccessList": [],
+      "lineGarageList": []
+    },
+    {
+      "id": 26,
+      "name": "New Brian-STATION",
+      "hopen": "06:00",
+      "latitude": -6.3806,
+      "longitude": -59.8334,
+      "hclose": "23:00",
+      "ptoInfo": false,
+      "wifi": false,
+      "busStation": false,
+      "taxiStation": false,
+      "lineAccessList": [],
+      "lineGarageList": []
+    }
+  ]
+}
