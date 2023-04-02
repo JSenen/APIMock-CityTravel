@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "codeLine": "L-671",
     "firstTime": "06:30",
     "lastTime": "21:30",
@@ -22,14 +23,6 @@
             "num": 853,
             "latitude": 0.0,
             "longitude": 0.0,
-            "elevator": false
-          },
-          {
-            "id": 20,
-            "street": "6902 Smith Keys",
-            "num": 267,
-            "latitude": 55.6621,
-            "longitude": -43.2351,
             "elevator": false
           }
         ],
@@ -58,77 +51,10 @@
         ],
         "lineGarageList": []
       },
-      {
-        "id": 3,
-        "name": "Lake Olafshire-STATION",
-        "hopen": "07:30",
-        "latitude": -89.5577,
-        "longitude": 16.7324,
-        "hclose": "23:45",
-        "ptoInfo": false,
-        "wifi": false,
-        "busStation": false,
-        "taxiStation": false,
-        "lineAccessList": [],
-        "lineGarageList": []
-      },
-      {
-        "id": 4,
-        "name": "Mansfield-STATION",
-        "hopen": "07:30",
-        "latitude": 24.0248,
-        "longitude": 6.6361,
-        "hclose": "21:30",
-        "ptoInfo": false,
-        "wifi": false,
-        "busStation": false,
-        "taxiStation": false,
-        "lineAccessList": [
-          {
-            "id": 13,
-            "street": "1724 Santino Path",
-            "num": 341,
-            "latitude": -58.9799,
-            "longitude": 170.2563,
-            "elevator": false
-          }
-        ],
-        "lineGarageList": []
-      },
-      {
-        "id": 7,
-        "name": "South Wilbert-STATION",
-        "hopen": "04:00",
-        "latitude": -41.8007,
-        "longitude": 68.1282,
-        "hclose": "21:30",
-        "ptoInfo": false,
-        "wifi": false,
-        "busStation": false,
-        "taxiStation": false,
-        "lineAccessList": [
-          {
-            "id": 15,
-            "street": "8152 Ruth Glen",
-            "num": 126,
-            "latitude": 81.1898,
-            "longitude": 172.7501,
-            "elevator": false
-          },
-          {
-            "id": 17,
-            "street": "260 Ambrose Plaza",
-            "num": 932,
-            "latitude": -17.9639,
-            "longitude": -84.2337,
-            "elevator": false
-          }
-        ],
-        "lineGarageList": []
-      }
     ]
   },
   {
+    "id": 2,
     "codeLine": "L-806",
     "firstTime": "06:30",
     "lastTime": "22:30",
@@ -159,6 +85,7 @@
     ]
   },
   {
+    "id": 3,
     "codeLine": "L-696",
     "firstTime": "07:00",
     "lastTime": "23:45",
@@ -176,6 +103,14 @@
         "taxiStation": false,
         "lineAccessList": [
           {
+            "id": 5,
+            "street": "2064 Lehner Port",
+            "num": 871,
+            "latitude": 0.0,
+            "longitude": 0.0,
+            "elevator": false
+          },
+          {
             "id": 10,
             "street": "4361 Dietrich Fields",
             "num": 140,
@@ -187,31 +122,23 @@
         "lineGarageList": []
       },
       {
-        "id": 17,
-        "name": "Port Tiffany-STATION",
-        "hopen": "07:00",
-        "latitude": 79.2529,
-        "longitude": -90.7643,
-        "hclose": "22:30",
+        "id": 18,
+        "name": "Stromanburgh-STATION",
+        "hopen": "04:00",
+        "latitude": 13.7863,
+        "longitude": -100.3332,
+        "hclose": "23:30",
         "ptoInfo": false,
         "wifi": false,
         "busStation": false,
         "taxiStation": false,
         "lineAccessList": [
           {
-            "id": 6,
-            "street": "3794 Furman Views",
-            "num": 217,
-            "latitude": 0.0,
-            "longitude": 0.0,
-            "elevator": false
-          },
-          {
-            "id": 18,
-            "street": "965 Polly Springs",
-            "num": 521,
-            "latitude": -21.3463,
-            "longitude": -88.644,
+            "id": 16,
+            "street": "11544 Prosacco Passage",
+            "num": 960,
+            "latitude": 20.5846,
+            "longitude": -76.7531,
             "elevator": false
           }
         ],
@@ -220,6 +147,7 @@
     ]
   },
   {
+    "id": 4,
     "codeLine": "L-817",
     "firstTime": "04:30",
     "lastTime": "23:45",
@@ -237,91 +165,32 @@
         "taxiStation": false,
         "lineAccessList": [],
         "lineGarageList": []
-      },
-      {
-        "id": 21,
-        "name": "Rutherfordmouth-STATION",
-        "hopen": "06:00",
-        "latitude": -52.6002,
-        "longitude": -150.7616,
-        "hclose": "23:00",
-        "ptoInfo": false,
-        "wifi": false,
-        "busStation": false,
-        "taxiStation": false,
-        "lineAccessList": [],
-        "lineGarageList": []
-      },
-      {
-        "id": 22,
-        "name": "New Cruz-STATION",
-        "hopen": "06:30",
-        "latitude": -60.3666,
-        "longitude": -21.3816,
-        "hclose": "21:00",
-        "ptoInfo": false,
-        "wifi": false,
-        "busStation": false,
-        "taxiStation": false,
-        "lineAccessList": [],
-        "lineGarageList": []
       }
     ]
   },
   {
-    "codeLine": "L-9",
-    "firstTime": "06:30",
-    "lastTime": "22:30",
-    "stations": [
-      {
-        "id": 23,
-        "name": "Schinnershire-STATION",
-        "hopen": "04:30",
-        "latitude": 33.4105,
-        "longitude": -67.7763,
-        "hclose": "23:45",
-        "ptoInfo": false,
-        "wifi": false,
-        "busStation": false,
-        "taxiStation": false,
-        "lineAccessList": [],
-        "lineGarageList": []
-      },
-      {
-        "id": 26,
-        "name": "New Brian-STATION",
-        "hopen": "06:00",
-        "latitude": -6.3806,
-        "longitude": -59.8334,
-        "hclose": "23:00",
-        "ptoInfo": false,
-        "wifi": false,
-        "busStation": false,
-        "taxiStation": false,
-        "lineAccessList": [],
-        "lineGarageList": []
-      }
-    ]
-  },
-  {
+    "id": 6,
     "codeLine": "L-214",
     "firstTime": "04:00",
     "lastTime": "23:30",
     "stations": []
   },
   {
-    "codeLine": "L-259",
-    "firstTime": "04:30",
-    "lastTime": "22:30",
-    "stations": []
-  },
-  {
+    "id": 8,
     "codeLine": "L-387",
     "firstTime": "07:00",
     "lastTime": "21:00",
     "stations": []
   },
   {
+    "id": 9,
+    "codeLine": "L-174",
+    "firstTime": "04:30",
+    "lastTime": "22:30",
+    "stations": []
+  },
+  {
+    "id": 10,
     "codeLine": "L-912",
     "firstTime": "07:00",
     "lastTime": "21:00",
