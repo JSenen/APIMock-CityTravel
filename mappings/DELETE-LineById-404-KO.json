@@ -8,6 +8,6 @@
     "headers": {
       "Content-Type": "application/json"
     },
-    "bodyFileName": "DELETE-LineById-KO.json"
+    "bodyFileName": "DELETE-LineById-404-KO.json"
   }
 }

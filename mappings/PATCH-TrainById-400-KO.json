@@ -1,14 +1,14 @@
 {
   "request": {
     "method": "PATCH",
-    "url": "/train/a"
+    "url": "/train/13"
   },
   "response": {
     "status": 400,
     "headers": {
       "Content-Type": "application/json"
     },
-    "bodyFileName": "PATCH-TrainById-400-KO.json",
+    "bodyFileName": "PATCH-TrainById-400-KO.json"
 
   }
 }

@@ -1,7 +1,7 @@
 {
   "request": {
-    "method": "PATCH",
-    "url": "/access/a"
+    "method": "PUT",
+    "url": "/access/8"
   },
   "response": {
     "status": 400,

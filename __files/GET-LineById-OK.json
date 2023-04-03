@@ -1,67 +1,35 @@
+
 {
-  "id": 5,
-  "codeLine": "L-9",
-  "color": "white",
-  "firstTime": "06:30",
-  "lastTime": "22:30",
-  "stopTime": 2,
-  "trains": [],
+  "id": 11,
+  "codeLine": "L-786",
+  "color": "blue",
+  "firstTime": "04:00",
+  "lastTime": "21:30",
+  "stopTime": 11,
+  "trains":[
+    {
+      "id": 13,
+      "code": "WF",
+      "model": "recusandae",
+      "numWagons": 0,
+      "numSeats": 0,
+      "numStandUp": 0,
+      "datebuy": null
+    }
+  ],
   "stations": [
     {
-      "id": 23,
-      "name": "Schinnershire-STATION",
-      "hopen": "04:30",
-      "latitude": 33.4105,
-      "longitude": -67.7763,
-      "hclose": "23:45",
-      "ptoInfo": false,
-      "wifi": false,
-      "busStation": false,
-      "taxiStation": false,
-      "lineAccessList": [],
-      "lineGarageList": []
-    },
-    {
-      "id": 24,
-      "name": "West Bretfort-STATION",
+      "id": 8,
+      "name": "Daytona Beach-STATION",
       "hopen": "07:00",
-      "latitude": -14.069,
-      "longitude": -126.1035,
-      "hclose": "22:30",
-      "ptoInfo": false,
-      "wifi": false,
-      "busStation": false,
-      "taxiStation": false,
-      "lineAccessList": [],
-      "lineGarageList": []
-    },
-    {
-      "id": 25,
-      "name": "West Michellefort-STATION",
-      "hopen": "04:00",
-      "latitude": -83.0843,
-      "longitude": -13.4314,
+      "latitude": 51.3138,
+      "longitude": -4.5504,
       "hclose": "23:30",
       "ptoInfo": false,
       "wifi": false,
       "busStation": false,
       "taxiStation": false,
-      "lineAccessList": [],
-      "lineGarageList": []
-    },
-    {
-      "id": 26,
-      "name": "New Brian-STATION",
-      "hopen": "06:00",
-      "latitude": -6.3806,
-      "longitude": -59.8334,
-      "hclose": "23:00",
-      "ptoInfo": false,
-      "wifi": false,
-      "busStation": false,
-      "taxiStation": false,
-      "lineAccessList": [],
-      "lineGarageList": []
+      "lineAccessList": null,
+      "lineGarageList": null
+    }]
     }
-  ]
-}
