@@ -1,13 +1,13 @@
+
 {
   "request": {
     "method": "DELETE",
-    "url": "/station/2"
+    "urlPattern": "/station/([0-9]*)"
   },
   "response": {
     "status": 204,
     "headers": {
       "Content-Type": "application/json"
-    },
-    "bodyFileName": "DELETE-StationById-OK.json"
+    }
   }
 }
