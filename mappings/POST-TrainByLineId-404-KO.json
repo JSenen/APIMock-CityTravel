@@ -7,7 +7,6 @@
     "status": 404,
     "headers": {
       "Content-Type": "application/json"
-    },
-    "bodyFileName": "POST-TrainByLineId-404-KO.json"
+    }
   }
 }
