@@ -8,6 +8,6 @@
     "headers": {
       "Content-Type": "application/json"
     },
-    "bodyFileName": "PATCH-LineById-KO.json"
+    "bodyFileName": "PATCH-LineById-404-KO.json"
   }
 }

@@ -1,7 +1,7 @@
 {
   "request": {
     "method": "POST",
-    "url": "/train/11/train"
+    "url": "/train/10/trains"
   },
   "response": {
     "status": 400,
