@@ -1,0 +1,1596 @@
+{
+	"info": {
+		"_postman_id": "48459df0-348f-4807-b86b-1b156e45db82",
+		"name": "CITY-TRAVEL MOK",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17632514"
+	},
+	"item": [
+		{
+			"name": "TEST-CityTravel-MOK",
+			"item": [
+				{
+					"name": "register OK",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"",
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"{{$randomUserName}}\",\n    \"password\": \"{{$randomPassword}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{APIMOK_CityTravel}}/register",
+							"host": [
+								"{{APIMOK_CityTravel}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "token OK",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"",
+									"",
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"administrador\",\n    \"password\": \"admin\"\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{APIMOK_CityTravel}}/token",
+							"host": [
+								"{{APIMOK_CityTravel}}"
+							],
+							"path": [
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/lines OK",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{APIMOK_CityTravel}}/lines",
+							"host": [
+								"{{APIMOK_CityTravel}}"
+							],
+							"path": [
+								"lines"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/line OK",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json();",
+									"pm.collectionVariables.set(\"idLine\", response.id); //Recuperamos Id linea",
+									"",
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "jwt",
+							"jwt": [
+								{
+									"key": "algorithm",
+									"value": "HS256",
+									"type": "string"
+								},
+								{
+									"key": "isSecretBase64Encoded",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "payload",
+									"value": "{}",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "queryParamKey",
+									"value": "token",
+									"type": "string"
+								},
+								{
+									"key": "header",
+									"value": "{}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"codeLine\": \"L-786\",\n    \"color\": \"blue\",\n    \"firstTime\": \"04:00\",\n    \"lastTime\": \"21:30\",\n    \"stopTime\": 11,\n    \"trains\": null,\n    \"stations\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{APIMOK_CityTravel}}/line",
+							"host": [
+								"{{APIMOK_CityTravel}}"
+							],
+							"path": [
+								"line"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/train /{LineId}/train OK",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"code\": \"WF\",\n  \"model\": \"recusandae\",\n  \"numWagons\": 0,\n  \"numSeats\": 0,\n  \"numStandUp\": 0,\n  \"datebuy\": null  \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{APIMOK_CityTravel}}/train/11/train",
+							"host": [
+								"{{APIMOK_CityTravel}}"
+							],
+							"path": [
+								"train",
+								"11",
+								"train"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/station /{id}/station OK",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \n    \"name\": \"Daytona Beach-STATION\",\n    \"hopen\": \"07:00\",\n    \"latitude\": 51.3138,\n    \"longitude\": -4.5504,\n    \"hclose\": \"23:30\",\n    \"ptoInfo\": false,\n    \"wifi\": false,\n    \"busStation\": false,\n    \"taxiStation\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{APIMOK_CityTravel}}/station/11/station",
+							"host": [
+								"{{APIMOK_CityTravel}}"
+							],
+							"path": [
+								"station",
+								"11",
+								"station"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/line/{id} OK",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{APIMOK_CityTravel}}/line/11",
+							"host": [
+								"{{APIMOK_CityTravel}}"
+							],
+							"path": [
+								"line",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/train/{id}  (400)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{APIMOK_CityTravel}}/train/a",
+							"host": [
+								"{{APIMOK_CityTravel}}"
+							],
+							"path": [
+								"train",
+								"a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/line/{id] KO  (404)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{APIMOK_CityTravel}}/line/45",
+							"host": [
+								"{{APIMOK_CityTravel}}"
+							],
+							"path": [
+								"line",
+								"45"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/lines KO 500",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 500\", function () {",
+									"    pm.response.to.have.status(500);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{APIMOK_CityTravel}}/lines/500",
+							"host": [
+								"{{APIMOK_CityTravel}}"
+							],
+							"path": [
+								"lines",
+								"500"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/train/{lineId}/train 400 KO",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Autho",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"elevator\": \"true\"\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{APIMOK_CityTravel}}/train/13/train",
+							"host": [
+								"{{APIMOK_CityTravel}}"
+							],
+							"path": [
+								"train",
+								"13",
+								"train"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/train/{lineId}/train 404 KO",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 17,\n    \"code\": \"DVM\",\n    \"model\": \"aperiam\",\n    \"numWagons\": 12,\n    \"numSeats\": 186,\n    \"numStandUp\": 51,\n    \"datebuy\": \"04/15/2023\"  \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{APIMOK_CityTravel}}/train/404/train",
+							"host": [
+								"{{APIMOK_CityTravel}}"
+							],
+							"path": [
+								"train",
+								"404",
+								"train"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/train/{id} OK",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 202\", function () {",
+									"    pm.response.to.have.status(202);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Autho",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"code\": \"AA45\",\n  \"model\": \"recusandae\",\n  \"numWagons\": 0,\n  \"numSeats\": 0,\n  \"numStandUp\": 0,\n  \"datebuy\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{APIMOK_CityTravel}}/train/13",
+							"host": [
+								"{{APIMOK_CityTravel}}"
+							],
+							"path": [
+								"train",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/access/{id} 400 KO",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2,\n    \"street\": \"553 Estrella Glens\"\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{APIMOK_CityTravel}}/access/8",
+							"host": [
+								"{{APIMOK_CityTravel}}"
+							],
+							"path": [
+								"access",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/line/{id} 404 KO",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"street\": \"553 Estrella Glens\",\n    \"num\": 906,\n    \"latitude\": -65.3841,\n    \"longitude\": 88.8983,\n    \"elevator\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{APIMOK_CityTravel}}/line/404",
+							"host": [
+								"{{APIMOK_CityTravel}}"
+							],
+							"path": [
+								"line",
+								"404"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/access/{accessId}/access OK",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"elevator\": false\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{APIMOK_CityTravel}}/access/6/access",
+							"host": [
+								"{{APIMOK_CityTravel}}"
+							],
+							"path": [
+								"access",
+								"6",
+								"access"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/train/{trainId}/ 400 KO",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"numSeats\": \"diez y nueve\",\n        \"numWagons\": 12,\n        \"numStandUp\": 0\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{APIMOK_CityTravel}}/train/13",
+							"host": [
+								"{{APIMOK_CityTravel}}"
+							],
+							"path": [
+								"train",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/line/{id} 404 KO",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Autho",
+								"value": "Bearer {{token}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"codeLine\":\"L-700\"\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{APIMOK_CityTravel}}/line/79",
+							"host": [
+								"{{APIMOK_CityTravel}}"
+							],
+							"path": [
+								"line",
+								"79"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/station/{id} OK",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {",
+									"    pm.response.to.have.status(204);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{APIMOK_CityTravel}}/station/2",
+							"host": [
+								"{{APIMOK_CityTravel}}"
+							],
+							"path": [
+								"station",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/access/{id} 400 KO",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{APIMOK_CityTravel}}/access/a",
+							"host": [
+								"{{APIMOK_CityTravel}}"
+							],
+							"path": [
+								"access",
+								"a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/line/{id} 404 KO",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{APIMOK_CityTravel}}/line/404",
+							"host": [
+								"{{APIMOK_CityTravel}}"
+							],
+							"path": [
+								"line",
+								"404"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "register OK",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Post Register\", () => {",
+							"    pm.expect(pm.response.code).to.eq(201);",
+							"})",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"administrador\",\n    \"password\": \"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{APIMOK_CityTravel}}/register",
+					"host": [
+						"{{APIMOK_CityTravel}}"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "token OK",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Post token\", () => {",
+							"    pm.expect(pm.response.code).to.eq(201);",
+							"})",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"administrador\",\n    \"password\": \"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{APIMOK_CityTravel}}/token",
+					"host": [
+						"{{APIMOK_CityTravel}}"
+					],
+					"path": [
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/lines OK",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Get Lines\", () => {",
+							"    pm.expect(pm.response.code).to.eq(200);",
+							"})",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{APIMOK_CityTravel}}/lines",
+					"host": [
+						"{{APIMOK_CityTravel}}"
+					],
+					"path": [
+						"lines"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/line OK",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Post Line\", () => {",
+							"    pm.expect(pm.response.code).to.eq(201);",
+							"})",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"codeLine\": \"L-786\",\n    \"color\": \"blue\",\n    \"firstTime\": \"04:00\",\n    \"lastTime\": \"21:30\",\n    \"stopTime\": 11,\n    \"trains\": null,\n    \"stations\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{APIMOK_CityTravel}}/line",
+					"host": [
+						"{{APIMOK_CityTravel}}"
+					],
+					"path": [
+						"line"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/train /{LineId}/train OK",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"New Line\", () => {",
+							"    pm.expect(pm.response.code).to.eq(201);",
+							"})",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"code\": \"WF\",\n  \"model\": \"recusandae\",\n  \"numWagons\": 0,\n  \"numSeats\": 0,\n  \"numStandUp\": 0,\n  \"datebuy\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{APIMOK_CityTravel}}/train/11/train",
+					"host": [
+						"{{APIMOK_CityTravel}}"
+					],
+					"path": [
+						"train",
+						"11",
+						"train"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/station /{id}/station OK",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"New Line\", () => {",
+							"    pm.expect(pm.response.code).to.eq(201);",
+							"})",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Daytona Beach-STATION\",\n    \"hopen\": \"07:00\",\n    \"latitude\": 51.3138,\n    \"longitude\": -4.5504,\n    \"hclose\": \"23:30\",\n    \"ptoInfo\": false,\n    \"wifi\": false,\n    \"busStation\": false,\n    \"taxiStation\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{APIMOK_CityTravel}}/station/11/station",
+					"host": [
+						"{{APIMOK_CityTravel}}"
+					],
+					"path": [
+						"station",
+						"11",
+						"station"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/line/{id} OK",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"New Line\", () => {",
+							"    pm.expect(pm.response.code).to.eq(200);",
+							"})",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{APIMOK_CityTravel}}/line/11",
+					"host": [
+						"{{APIMOK_CityTravel}}"
+					],
+					"path": [
+						"line",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/train/{id}  (400)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"New Line\", () => {",
+							"    pm.expect(pm.response.code).to.eq(400);",
+							"})",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{APIMOK_CityTravel}}/train/a",
+					"host": [
+						"{{APIMOK_CityTravel}}"
+					],
+					"path": [
+						"train",
+						"a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/line/{id] KO  (404)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"New Line\", () => {",
+							"    pm.expect(pm.response.code).to.eq(404);",
+							"})",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{APIMOK_CityTravel}}/line/45",
+					"host": [
+						"{{APIMOK_CityTravel}}"
+					],
+					"path": [
+						"line",
+						"45"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/lines KO 500",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"New Line\", () => {",
+							"    pm.expect(pm.response.code).to.eq(500);",
+							"})",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{APIMOK_CityTravel}}/lines/500",
+					"host": [
+						"{{APIMOK_CityTravel}}"
+					],
+					"path": [
+						"lines",
+						"500"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/train/{lineId}/train 400 KO",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"New Line\", () => {",
+							"    pm.expect(pm.response.code).to.eq(400);",
+							"})",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"elevator\": \"true\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{APIMOK_CityTravel}}/train/13/train",
+					"host": [
+						"{{APIMOK_CityTravel}}"
+					],
+					"path": [
+						"train",
+						"13",
+						"train"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/train/{lineId}/train 404 KO",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 17,\n    \"code\": \"DVM\",\n    \"model\": \"aperiam\",\n    \"numWagons\": 12,\n    \"numSeats\": 186,\n    \"numStandUp\": 51,\n    \"datebuy\": \"04/15/2023\"   \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{APIMOK_CityTravel}}/train/404/train",
+					"host": [
+						"{{APIMOK_CityTravel}}"
+					],
+					"path": [
+						"train",
+						"404",
+						"train"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/train/{id} OK",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"code\": \"AA45\",\n  \"model\": \"recusandae\",\n  \"numWagons\": 0,\n  \"numSeats\": 0,\n  \"numStandUp\": 0,\n  \"datebuy\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{APIMOK_CityTravel}}/train/13",
+					"host": [
+						"{{APIMOK_CityTravel}}"
+					],
+					"path": [
+						"train",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/access/{id} 400 KO",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 2,\n    \"street\": \"553 Estrella Glens\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{APIMOK_CityTravel}}/access/8",
+					"host": [
+						"{{APIMOK_CityTravel}}"
+					],
+					"path": [
+						"access",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/line/{id} 404 KO",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"street\": \"553 Estrella Glens\",\n    \"num\": 906,\n    \"latitude\": -65.3841,\n    \"longitude\": 88.8983,\n    \"elevator\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{APIMOK_CityTravel}}/line/404",
+					"host": [
+						"{{APIMOK_CityTravel}}"
+					],
+					"path": [
+						"line",
+						"404"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/access/{accessId}/access OK",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"elevator\": false\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{APIMOK_CityTravel}}/access/6/access",
+					"host": [
+						"{{APIMOK_CityTravel}}"
+					],
+					"path": [
+						"access",
+						"6",
+						"access"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/train/{trainId}/ 400 KO",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"numSeats\": \"diez y nueve\",\n        \"numWagons\": 12,\n        \"numStandUp\": 0\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{APIMOK_CityTravel}}/train/13",
+					"host": [
+						"{{APIMOK_CityTravel}}"
+					],
+					"path": [
+						"train",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/line/{id} 404 KO",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"codeLine\":\"L-700\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{APIMOK_CityTravel}}/line/79",
+					"host": [
+						"{{APIMOK_CityTravel}}"
+					],
+					"path": [
+						"line",
+						"79"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/station/{id} OK",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{APIMOK_CityTravel}}/station/2",
+					"host": [
+						"{{APIMOK_CityTravel}}"
+					],
+					"path": [
+						"station",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/access/{id} 400 KO",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{APIMOK_CityTravel}}/access/a",
+					"host": [
+						"{{APIMOK_CityTravel}}"
+					],
+					"path": [
+						"access",
+						"a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/line/{id} 404 KO",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{APIMOK_CityTravel}}/line/404",
+					"host": [
+						"{{APIMOK_CityTravel}}"
+					],
+					"path": [
+						"line",
+						"404"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": ""
+		},
+		{
+			"key": "idLine",
+			"value": ""
+		},
+		{
+			"key": "username",
+			"value": ""
+		},
+		{
+			"key": "password",
+			"value": ""
+		}
+	]
+}
