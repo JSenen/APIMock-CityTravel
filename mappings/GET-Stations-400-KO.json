@@ -1,0 +1,14 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/stations/stations"
+  },
+  "response": {
+    "status": 400,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "GET-Stations-400-KO.json"
+
+  }
+}
