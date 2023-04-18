@@ -1,0 +1,28 @@
+{
+  "id": 12,
+  "name": "San Clemencio",
+  "hopen": "06:45",
+  "latitude": -8.2698,
+  "longitude": 122.9332,
+  "hcose": "23:00",
+  "ptoInfo": true,
+  "wifi": true,
+  "bus_station": true,
+  "taxi_station": true,
+  "LineAccess": {
+    "Id": 23,
+    "street": "Avda Barcelona",
+    "num": 291,
+    "latitude": 23.2345,
+    "longitude": 12.456,
+    "elevator": true
+  },
+  "LineGarage": {
+    "Id": 2,
+    "codeGarage": "G-234",
+    "taller": true,
+    "surface": 234.45,
+    "rrhh": true,
+    "paintService": true
+  }
+}

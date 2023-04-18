@@ -1,0 +1,14 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/station/12"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "GET-StationById-OK.json"
+
+  }
+}
