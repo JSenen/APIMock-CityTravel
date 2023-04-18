@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "PATCH",
+    "url": "/lines11"
+  },
+  "response": {
+    "status": 202,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "PATCH-LineById-OK.json"
+  }
+}

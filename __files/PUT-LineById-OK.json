@@ -1,0 +1,34 @@
+{
+  "id": 11,
+  "codeLine": "Atocha",
+  "color": "red",
+  "firstTime": "06:00",
+  "lastTime": "22:35",
+  "stopTime": 6,
+  "trains":[
+    {
+      "id": 13,
+      "code": "WF",
+      "model": "recusandae",
+      "numWagons": 0,
+      "numSeats": 0,
+      "numStandUp": 0,
+      "datebuy": null
+    }
+  ],
+  "stations": [
+    {
+      "id": 8,
+      "name": "Daytona Beach-STATION",
+      "hopen": "07:00",
+      "latitude": 51.3138,
+      "longitude": -4.5504,
+      "hclose": "23:30",
+      "ptoInfo": false,
+      "wifi": false,
+      "busStation": false,
+      "taxiStation": false,
+      "lineAccessList": null,
+      "lineGarageList": null
+    }]
+}

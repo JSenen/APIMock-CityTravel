@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "PATCH",
+    "url": "/lines/11"
+  },
+  "response": {
+    "status": 401,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "PATCH-LineById-401-KO.json"
+  }
+}
