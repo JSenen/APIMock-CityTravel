@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/line/500/stations"
+  },
+  "response": {
+    "status": 500,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "GET-Lines-500-KO.json"
+  }
+}

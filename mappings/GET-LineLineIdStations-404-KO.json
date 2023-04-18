@@ -1,0 +1,14 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/line/404/stations"
+  },
+  "response": {
+    "status": 404,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "GET-LineLineIdStations-404-KO.json"
+
+  }
+}

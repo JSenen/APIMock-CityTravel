@@ -1,0 +1,14 @@
+{
+  "priority": 3,
+  "request": {
+    "method": "POST",
+    "url": "/line"
+  },
+  "response": {
+    "status": 401,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "PATCH-LineById-401-KO.json"
+  }
+}
