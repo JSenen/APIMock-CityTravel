@@ -1,0 +1,14 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/line/a/trains"
+  },
+  "response": {
+    "status": 400,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "GET-LineLineIdTrains-400-KO.json"
+
+  }
+}

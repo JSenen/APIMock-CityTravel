@@ -1,0 +1,20 @@
+[
+  {
+    "id": 4,
+    "codeTrain": "GHF-234",
+    "model": "REFLEX-23V",
+    "numWagons": 10,
+    "numSeats": 160,
+    "numStandUp": 240,
+    "dateBuy": "23-02-1998"
+  },
+  {
+    "id": 9,
+    "codeTrain": "TPV-874",
+    "model": "SNOWB-200CV",
+    "numWagons": 23,
+    "numSeats": 190,
+    "numStandUp": 34,
+    "dateBuy": "02-02-1999"
+  }
+]
