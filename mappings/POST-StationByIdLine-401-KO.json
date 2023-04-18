@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/station/401/station"
+  },
+  "response": {
+    "status": 401,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "PATCH-LineById-401-KO.json"
+  }
+}

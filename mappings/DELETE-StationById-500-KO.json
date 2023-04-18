@@ -1,7 +1,8 @@
 {
+  "priority": 1,
   "request": {
-    "method": "GET",
-    "url": "/stations"
+    "method": "DELETE",
+    "url": "/station/500"
   },
   "response": {
     "status": 500,
