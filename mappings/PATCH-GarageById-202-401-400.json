@@ -1,0 +1,33 @@
+{
+  "mappings": [
+    {
+      "request": {
+        "method": "PATCH",
+        "url": "/garage/400/garage"
+      },
+      "response": {
+        "status": 400,
+        "bodyFileName": "PATCH-GarageById-400-KO.json"
+      }
+    },
+    {
+      "request": {
+        "method": "PATCH",
+        "url": "/garage/401/garage"
+      },
+      "response": {
+        "status": 401
+      }
+    },
+    {
+      "request": {
+        "method": "PATCH",
+        "url": "/garage/28/garage"
+      },
+      "response": {
+        "status": 202,
+        "bodyFileName":"PATCH-GarageById-OK.json"
+      }
+    }
+  ]
+}

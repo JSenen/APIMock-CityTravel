@@ -1,0 +1,32 @@
+{
+  "mappings": [
+    {
+      "request": {
+        "method": "DELETE",
+        "url": "/garage/500"
+      },
+      "response": {
+        "status": 500
+      }
+    },
+    {
+      "request": {
+        "method": "DELETE",
+        "url": "/garage/400"
+        },
+      "response": {
+        "status": 404,
+        "bodyFileName": "DELETE-GarageById-404-KO.json"
+      }
+    },
+    {
+      "request": {
+        "method": "DELETE",
+          "url": "/garage/17"
+      },
+      "response": {
+        "status": 204
+      }
+    }
+  ]
+}

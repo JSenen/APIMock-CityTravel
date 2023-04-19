@@ -1,5 +1,5 @@
 {
-  "prirotity": 1,
+
   "request": {
     "method": "GET",
     "url": "/accesses"

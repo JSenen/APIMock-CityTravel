@@ -1,0 +1,33 @@
+{
+  "mappings": [
+    {
+      "request": {
+        "method": "PUT",
+        "url": "/garage/401"
+      },
+      "response": {
+        "status": 401
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "/garages/400"
+      },
+      "response": {
+        "status": 400,
+        "bodyFileName": "PUT-GaragesById-400-KO.json"
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "/garages/17"
+      },
+      "response": {
+        "status": 202,
+        "bodyFileName": "PUT-GarageById-OK.json"
+      }
+    }
+  ]
+}

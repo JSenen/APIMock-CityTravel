@@ -1,0 +1,32 @@
+{
+  "mappings": [
+    {
+      "request": {
+        "method": "GET",
+        "url": "/garages/500"
+      },
+      "response": {
+        "status": 500
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "/garages/17"
+      },
+      "response": {
+        "status": 200,
+        "bodyFileName": "GET-GaragesById-OK.json"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "/garages/400"
+      },
+      "response": {
+        "status": 400
+      }
+    }
+  ]
+}
