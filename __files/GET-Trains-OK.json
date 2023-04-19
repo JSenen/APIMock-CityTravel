@@ -1,0 +1,20 @@
+[
+  {
+    "id": 28,
+    "code": "DVM",
+    "model": "eius",
+    "numWagons": 12,
+    "numSeats": 285,
+    "numStandUp": 83,
+    "datebuy": "02/04/2024"
+  },
+  {
+    "id": 29,
+    "code": "Jr.",
+    "model": "et",
+    "numWagons": 12,
+    "numSeats": 285,
+    "numStandUp": 83,
+    "datebuy": "02/04/2024"
+  }
+]

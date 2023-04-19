@@ -1,14 +1,12 @@
 {
-  "priority": 2,
   "request": {
     "method": "DELETE",
-    "url": "/station/404"
+    "url": "/train/29"
   },
   "response": {
-    "status": 404,
+    "status": 204,
     "headers": {
       "Content-Type": "application/json"
-    },
-    "bodyFileName": "DELETE-StationById-404-KO.json"
+    }
   }
 }
