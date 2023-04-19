@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/access/13/access"
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "POST-AccessByIdStation-OK.json"
+  }
+}
