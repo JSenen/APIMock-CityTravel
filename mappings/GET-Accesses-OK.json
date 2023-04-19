@@ -1,0 +1,15 @@
+{
+  "prirotity": 1,
+  "request": {
+    "method": "GET",
+    "url": "/accesses"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "GET-Accesses-OK.json"
+
+  }
+}

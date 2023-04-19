@@ -1,0 +1,15 @@
+{
+
+  "request": {
+    "method": "GET",
+    "url": "/accesses/500"
+  },
+  "response": {
+    "status": 500,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "Generic-500-KO.json"
+
+  }
+}

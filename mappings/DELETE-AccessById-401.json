@@ -1,0 +1,12 @@
+{
+  "request": {
+    "method": "DELETE",
+    "url": "/access/401"
+  },
+  "response": {
+    "status": 401,
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
