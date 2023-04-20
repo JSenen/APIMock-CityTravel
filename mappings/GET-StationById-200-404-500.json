@@ -1,0 +1,44 @@
+{
+  "mappings": [
+    {
+  "request": {
+    "method": "GET",
+    "url": "/station/12"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "GET-StationById-OK.json"
+
+  }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "/station/404"
+      },
+      "response": {
+        "status": 404,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "GET-StationById-404-KO.json"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "/station/500"
+      },
+      "response": {
+        "status": 500,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "Generic-500-KO.json"
+      }
+    }
+    ]
+}
