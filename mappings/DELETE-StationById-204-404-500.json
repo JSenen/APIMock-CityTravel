@@ -1,0 +1,44 @@
+
+{
+  "mappings": [
+    {
+      "request": {
+        "method": "DELETE",
+        "urlPattern": "/station/([0-9]*)"
+      },
+      "response": {
+        "status": 204,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+
+      "request": {
+        "method": "DELETE",
+        "url": "/station/404"
+      },
+      "response": {
+        "status": 404,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "DELETE-StationById-404-KO.json"
+      }
+    },
+    {
+      "request": {
+        "method": "DELETE",
+        "url": "/station/500"
+      },
+      "response": {
+        "status": 500,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "GET-Lines-500-KO.json"
+      }
+    }
+    ]
+}
