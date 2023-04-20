@@ -2,20 +2,32 @@
   "mappings": [
     {
       "request": {
-        "method": "PATCH",
+        "method": "DELETE",
         "url": "/lines/11"
       },
       "response": {
-        "status": 202,
+        "status": 204,
         "headers": {
           "Content-Type": "application/json"
-        },
-        "bodyFileName": "PATCH-LineById-OK.json"
+        }
       }
     },
     {
       "request": {
-        "method": "PATCH",
+        "method": "DELETE",
+        "url": "/lines/a"
+      },
+      "response": {
+        "status": 400,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "DELETE-LineById-400-KO.json"
+      }
+    },
+    {
+      "request": {
+        "method": "DELETE",
         "url": "/lines/404"
       },
       "response": {
@@ -23,20 +35,7 @@
         "headers": {
           "Content-Type": "application/json"
         },
-        "bodyFileName": "PATCH-LineById-404-KO.json"
-      }
-    },
-    {
-      "request": {
-        "method": "PATCH",
-        "url": "/lines/401"
-      },
-      "response": {
-        "status": 401,
-        "headers": {
-          "Content-Type": "application/json"
-        },
-        "bodyFileName": "PATCH-LineById-401-KO.json"
+        "bodyFileName": "DELETE-LineById-404-KO.json"
       }
     }
     ]

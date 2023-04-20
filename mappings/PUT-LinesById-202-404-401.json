@@ -2,7 +2,7 @@
   "mappings": [
     {
       "request": {
-        "method": "PATCH",
+        "method": "PUT",
         "url": "/lines/11"
       },
       "response": {
@@ -10,12 +10,12 @@
         "headers": {
           "Content-Type": "application/json"
         },
-        "bodyFileName": "PATCH-LineById-OK.json"
+        "bodyFileName": "PUT-LineById-OK.json"
       }
     },
     {
       "request": {
-        "method": "PATCH",
+        "method": "PUT",
         "url": "/lines/404"
       },
       "response": {
@@ -23,20 +23,20 @@
         "headers": {
           "Content-Type": "application/json"
         },
-        "bodyFileName": "PATCH-LineById-404-KO.json"
+        "bodyFileName": "PUT-LineById-404-KO.json"
       }
     },
     {
       "request": {
-        "method": "PATCH",
-        "url": "/lines/401"
+        "method": "PUT",
+        "url": "/lines/13"
       },
       "response": {
-        "status": 401,
+        "status": 400,
         "headers": {
           "Content-Type": "application/json"
         },
-        "bodyFileName": "PATCH-LineById-401-KO.json"
+        "bodyFileName": "PUT-LineById-400-KO.json"
       }
     }
     ]
