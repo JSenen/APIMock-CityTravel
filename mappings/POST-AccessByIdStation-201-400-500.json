@@ -1,0 +1,43 @@
+{
+  "mappings": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "/access/13/access"
+      },
+      "response": {
+        "status": 201,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "POST-AccessByIdStation-OK.json"
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "url": "/access/aaa/access"
+      },
+      "response": {
+        "status": 400,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "POST-AccessByIdStation-400-KO.json"
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "url": "/access/500/access"
+      },
+      "response": {
+        "status": 500,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "POST-AccessByIdStation-500-KO.json"
+      }
+    }
+    ]
+}
