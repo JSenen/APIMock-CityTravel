@@ -1,0 +1,43 @@
+{
+  "mappings": [
+    {
+      "request": {
+        "method": "PUT",
+        "url": "/train/13"
+      },
+      "response": {
+        "status": 202,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "PUT-TrainById-OK.json"
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "/train/404"
+      },
+      "response": {
+        "status": 404,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "Generic_404_KO.json"
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "/train/401"
+      },
+      "response": {
+        "status": 401,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "Generic-401-KO.json"
+      }
+    }
+  ]
+}
