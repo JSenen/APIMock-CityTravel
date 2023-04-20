@@ -7,6 +7,9 @@
       },
       "response": {
         "status": 400,
+        "headers": {
+          "Content-Type": "application/json"
+        },
         "bodyFileName": "PATCH-GarageById-400-KO.json"
       }
     },
@@ -16,7 +19,11 @@
         "url": "/garage/401/garage"
       },
       "response": {
-        "status": 401
+        "status": 401,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "Generic-401-KO.json"
       }
     },
     {
@@ -26,6 +33,9 @@
       },
       "response": {
         "status": 202,
+        "headers":{
+          "Content-Type": "application/json"
+    },
         "bodyFileName":"PATCH-GarageById-OK.json"
       }
     }
