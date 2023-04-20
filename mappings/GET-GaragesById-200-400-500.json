@@ -1,0 +1,44 @@
+{
+  "mappings": [
+    {
+      "request": {
+        "method": "GET",
+        "url": "/garages/17"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "GET-GaragesById-OK.json"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "/garages/4aa"
+      },
+      "response": {
+        "status": 400,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "Generic-400-KO.json"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "/garages/500"
+      },
+      "response": {
+        "status": 500,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "Generic-500-KO.json"
+      }
+    }
+
+  ]
+}
