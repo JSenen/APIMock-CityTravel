@@ -1,13 +1,44 @@
 {
-  "request": {
-    "method": "GET",
-    "url": "/stations"
-  },
-  "response": {
-    "status": 200,
-    "headers": {
-      "Content-Type": "application/json"
+  "mappings": [
+    {
+      "request": {
+        "method": "GET",
+        "url": "/stations"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "GET-LineLineIdStations-OK.json"
+      }
     },
-    "bodyFileName": "GET-LineLineIdStations-OK.json"
-  }
+    {
+      "request": {
+        "method": "GET",
+        "url": "/stations/stations"
+      },
+      "response": {
+        "status": 400,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "GET-Stations-400-KO.json"
+
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "/stations5"
+      },
+      "response": {
+        "status": 500,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "GET-Lines-500-KO.json"
+      }
+    }
+    ]
 }
