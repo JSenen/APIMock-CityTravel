@@ -1,0 +1,44 @@
+{
+  "mappings": [
+    {
+      "request": {
+        "method": "PATCH",
+        "url": "/train/29"
+      },
+      "response": {
+        "status": 202,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "PATCH-TrainById-OK.json"
+      }
+    },
+    {
+      "request": {
+        "method": "PATCH",
+        "url": "/train/404"
+      },
+      "response": {
+        "status": 404,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "Generic_404_KO.json"
+      }
+    },
+    {
+      "request": {
+        "method": "PATCH",
+        "url": "/train/400"
+      },
+      "response": {
+        "status": 400,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "PATCH-TrainById-400-KO.json"
+
+      }
+    }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+  "mappings": [
+    {
+      "request": {
+        "method": "DELETE",
+        "url": "/train/29"
+      },
+      "response": {
+        "status": 204,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "DELETE",
+        "url": "/train/404"
+      },
+      "response": {
+        "status": 404,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "Generic_404_KO.json"
+      }
+    },
+    {
+      "request": {
+        "method": "DELETE",
+        "url": "/train/401"
+      },
+      "response": {
+        "status": 401,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "Generic-401-KO.json"
+      }
+    }
+    ]
+}
