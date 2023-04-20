@@ -1,5 +1,4 @@
 {
-
   "request": {
     "method": "GET",
     "url": "/accesses/500"
@@ -10,6 +9,5 @@
       "Content-Type": "application/json"
     },
     "bodyFileName": "Generic-500-KO.json"
-
   }
 }
