@@ -1,0 +1,43 @@
+{
+  "mappings": [
+    {
+      "request": {
+        "method": "GET",
+        "url": "/accesses/13"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "GET-AccessById-OK.json"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "/accesses/404"
+      },
+      "response": {
+        "status": 404,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "Generic_404_KO.json"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "/accesses/500"
+      },
+      "response": {
+        "status": 500,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "Generic-500-KO.json"
+      }
+    }
+    ]
+}
