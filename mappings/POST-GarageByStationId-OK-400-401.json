@@ -16,6 +16,9 @@
       },
       "response": {
         "status": 400,
+        "headers": {
+          "Content-Type": "application/json"
+        },
         "bodyFileName": "POST-GarageById-400-KO.json"
       }
     },

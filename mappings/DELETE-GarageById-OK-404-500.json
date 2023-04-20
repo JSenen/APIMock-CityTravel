@@ -6,16 +6,23 @@
         "url": "/garage/500"
       },
       "response": {
-        "status": 500
+        "status": 500,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "Generic-500-KO.json"
       }
     },
     {
       "request": {
         "method": "DELETE",
-        "url": "/garage/400"
+        "url": "/garage/404"
         },
       "response": {
         "status": 404,
+        "headers": {
+          "Content-Type": "application/json"
+        },
         "bodyFileName": "DELETE-GarageById-404-KO.json"
       }
     },
