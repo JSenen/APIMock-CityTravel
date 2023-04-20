@@ -1,0 +1,43 @@
+{
+  "mappings": [
+    {
+      "request": {
+        "method": "PUT",
+        "url": "/stations/12"
+      },
+      "response": {
+        "status": 202,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "PUT-StationById-OK.json"
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "/stations/404"
+      },
+      "response": {
+        "status": 404,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "PUT-LineById-404-KO.json"
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "/stations/401"
+      },
+      "response": {
+        "status": 401,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "PATCH-LineById-401-KO.json"
+      }
+    }
+    ]
+}
