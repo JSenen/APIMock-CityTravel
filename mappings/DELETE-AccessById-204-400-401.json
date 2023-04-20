@@ -1,0 +1,42 @@
+{
+  "mappings": [
+    {
+      "request": {
+        "method": "DELETE",
+        "url": "/access/18"
+      },
+      "response": {
+        "status": 204,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "DELETE",
+        "url": "/access/a"
+      },
+      "response": {
+        "status": 400,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "DELETE-AccessById-400-KO.json"
+      }
+    },
+    {
+      "request": {
+        "method": "DELETE",
+        "url": "/access/401"
+      },
+      "response": {
+        "status": 401,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    }
+
+    ]
+}
