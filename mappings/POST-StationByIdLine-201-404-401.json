@@ -1,0 +1,43 @@
+{
+  "mappings": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "/station/11/station"
+      },
+      "response": {
+        "status": 201,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "POST-StationByIdLine-OK.json"
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "url": "/station/404/station"
+      },
+      "response": {
+        "status": 404,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "Generic_404_KO.json"
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "url": "/station/401/station"
+      },
+      "response": {
+        "status": 401,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "PATCH-LineById-401-KO.json"
+      }
+    }
+    ]
+}
