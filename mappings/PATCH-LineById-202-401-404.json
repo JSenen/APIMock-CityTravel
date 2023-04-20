@@ -1,0 +1,43 @@
+{
+  "mappings": [
+    {
+      "request": {
+        "method": "PATCH",
+        "url": "/line/11"
+      },
+      "response": {
+        "status": 202,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "PATCH-LineById-OK.json"
+      }
+    },
+    {
+      "request": {
+        "method": "PATCH",
+        "url": "/line/404"
+      },
+      "response": {
+        "status": 404,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "PATCH-LineById-404-KO.json"
+      }
+    },
+    {
+      "request": {
+        "method": "PATCH",
+        "url": "/line/401"
+      },
+      "response": {
+        "status": 401,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "PATCH-LineById-401-KO.json"
+      }
+    }
+    ]
+}
