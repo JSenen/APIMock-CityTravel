@@ -21,7 +21,7 @@
       "response": {
         "status": 400,
         "headers": {
-          "Content-Type": "application/json",
+          "Content-Type": "application/json"
         },
         "bodyFileName": "POST-Token-400-KO.json"
       }
