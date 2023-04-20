@@ -1,0 +1,43 @@
+{
+  "mappings": [
+    {
+      "request": {
+        "method": "PUT",
+        "url": "/access/13"
+      },
+      "response": {
+        "status": 202,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "PUT-AccessById-OK.json"
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "/access/401"
+      },
+      "response": {
+        "status": 401,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "Generic-401-KO.json"
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "/access/8"
+      },
+      "response": {
+        "status": 400,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "PUT-AccessById-400-KO.json"
+      }
+    }
+    ]
+}
