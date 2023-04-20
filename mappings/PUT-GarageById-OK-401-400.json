@@ -3,30 +3,40 @@
     {
       "request": {
         "method": "PUT",
-        "url": "/garage/401"
-      },
-      "response": {
-        "status": 401
-      }
-    },
-    {
-      "request": {
-        "method": "PUT",
-        "url": "/garages/400"
-      },
-      "response": {
-        "status": 400,
-        "bodyFileName": "PUT-GaragesById-400-KO.json"
-      }
-    },
-    {
-      "request": {
-        "method": "PUT",
-        "url": "/garages/19"
+        "url": "/garage/19"
       },
       "response": {
         "status": 202,
+        "headers": {
+          "Content-Type": "application/json"
+        },
         "bodyFileName": "PUT-GarageById-OK.json"
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "/garage/401"
+      },
+      "response": {
+        "status": 401,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "Generic-401-KO.json"
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "/garage/8"
+      },
+      "response": {
+        "status": 400,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "PUT-GaragesById-400-KO.json"
       }
     }
   ]
