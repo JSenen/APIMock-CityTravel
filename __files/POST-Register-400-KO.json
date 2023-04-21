@@ -1,1 +1,4 @@
-"El objeto no es valido"
+{
+  "errorCode": 400,
+  "message": "Bad Request"
+}

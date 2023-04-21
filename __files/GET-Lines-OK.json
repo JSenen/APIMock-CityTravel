@@ -195,5 +195,15 @@
     "firstTime": "07:00",
     "lastTime": "21:00",
     "stations": []
+  },
+  {
+    "id": 11,
+    "codeLine": "L-786",
+    "color": "blue",
+    "firstTime": "04:00",
+    "lastTime": "21:30",
+    "stopTime": 11,
+    "trains": null,
+    "stations": null
   }
 ]

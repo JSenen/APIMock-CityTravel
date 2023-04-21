@@ -3,7 +3,7 @@
     {
   "request": {
     "method": "GET",
-    "url": "/station/12"
+    "url": "/station/8"
   },
   "response": {
     "status": 200,

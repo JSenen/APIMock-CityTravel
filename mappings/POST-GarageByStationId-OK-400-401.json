@@ -25,11 +25,14 @@
     {
       "request": {
         "method": "POST",
-        "url": "/garage/28/garage"
+        "url": "/garage/8/garage"
       },
       "response": {
         "status": 201,
-        "bodyFileName":"POST-GarageById-OK.json"
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "POST-GarageById-OK.json"
       }
     }
   ]

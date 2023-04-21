@@ -1,4 +1,5 @@
 [
+
   {
     "id": 4,
     "codeTrain": "GHF-234",
@@ -16,5 +17,14 @@
     "numSeats": 190,
     "numStandUp": 34,
     "dateBuy": "02-02-1999"
+  },
+  {
+    "id": 13,
+    "code": "WF",
+    "model": "recusandae",
+    "numWagons": 0,
+    "numSeats": 0,
+    "numStandUp": 0,
+    "datebuy": null
   }
 ]
