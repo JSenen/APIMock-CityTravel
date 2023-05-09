@@ -1,0 +1,44 @@
+{
+  "mappings": [
+    {
+      "request": {
+        "method": "GET",
+        "url": "/line/5/stationscsv"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "text/csv"
+        },
+        "bodyFileName": "GET-LineLineIdStationsCSV-OK.json"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "/line/404/stationscsv"
+      },
+      "response": {
+        "status": 404,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "Generic_404_KO.json"
+
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "/line/500/stationscsv"
+      },
+      "response": {
+        "status": 500,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "GET-Lines-500-KO.json"
+      }
+    }
+  ]
+}
