@@ -1810,6 +1810,183 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "/line/{lineId}/stationscsv OK",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{APIMOK_CityTravel}}/line/5/stationscsv",
+							"host": [
+								"{{APIMOK_CityTravel}}"
+							],
+							"path": [
+								"line",
+								"5",
+								"stationscsv"
+							],
+							"query": [
+								{
+									"key": "wifi",
+									"value": "{{$randomBoolean}}",
+									"disabled": true
+								},
+								{
+									"key": "busStaion",
+									"value": "{{$randomBoolean}}",
+									"disabled": true
+								},
+								{
+									"key": "taxiStation",
+									"value": "{{$randomBoolean}}",
+									"disabled": true
+								},
+								{
+									"key": "ptoInfo",
+									"value": "{{$randomBoolean}}",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/line/{lineId}/stationscsv 404 KO",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{APIMOK_CityTravel}}/line/404/stationscsv",
+							"host": [
+								"{{APIMOK_CityTravel}}"
+							],
+							"path": [
+								"line",
+								"404",
+								"stationscsv"
+							],
+							"query": [
+								{
+									"key": "wifi",
+									"value": "{{$randomBoolean}}",
+									"disabled": true
+								},
+								{
+									"key": "busStaion",
+									"value": "{{$randomBoolean}}",
+									"disabled": true
+								},
+								{
+									"key": "taxiStation",
+									"value": "{{$randomBoolean}}",
+									"disabled": true
+								},
+								{
+									"key": "ptoInfo",
+									"value": "{{$randomBoolean}}",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/line/{lineId}/stationscsv 500 KO",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{APIMOK_CityTravel}}/line/500/stationscsv",
+							"host": [
+								"{{APIMOK_CityTravel}}"
+							],
+							"path": [
+								"line",
+								"500",
+								"stationscsv"
+							],
+							"query": [
+								{
+									"key": "wifi",
+									"value": "{{$randomBoolean}}",
+									"disabled": true
+								},
+								{
+									"key": "busStaion",
+									"value": "{{$randomBoolean}}",
+									"disabled": true
+								},
+								{
+									"key": "taxiStation",
+									"value": "{{$randomBoolean}}",
+									"disabled": true
+								},
+								{
+									"key": "ptoInfo",
+									"value": "{{$randomBoolean}}",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
